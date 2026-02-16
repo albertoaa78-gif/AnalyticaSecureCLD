@@ -99,12 +99,26 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     gap: 12px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 .logo-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
+    transition: all 0.5s ease;
+}
+
+.logo:hover .logo-icon {
+    transform: rotate(360deg);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .nav-menu {
@@ -1187,9 +1201,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo-icon {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
+    transition: all 0.5s ease;
+}
+
+.footer-brand:hover .footer-logo-icon {
+    transform: rotate(360deg);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .footer-logo {
