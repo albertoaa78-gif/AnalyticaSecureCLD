@@ -33,12 +33,11 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    if (currentScroll > 100) {
-        navbar.style.padding = '20px 0';
-        navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+    // Add/remove scrolled class for background effect
+    if (currentScroll > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.padding = '25px 0';
-        navbar.style.background = 'rgba(0, 0, 0, 0.95)';
+        navbar.classList.remove('scrolled');
     }
     
     lastScroll = currentScroll;
