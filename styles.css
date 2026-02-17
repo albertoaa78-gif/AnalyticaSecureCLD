@@ -376,6 +376,15 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--gold);
 }
 
+/* ===== GOLD ACCENT OVERRIDES — garantiza dorado en todos los contextos ===== */
+.section-subtitle,
+.page-subtitle,
+.service-label,
+.service-number,
+.tech-label {
+    color: var(--gold) !important;
+}
+
 @keyframes scrollPulse {
     0%, 100% { opacity: 0.3; }
     50% { opacity: 1; }
@@ -840,17 +849,23 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(-5px);
 }
 
+/* Tech feature icons — Plataforma Unificada */
 .tech-icon {
     width: 40px;
     height: 40px;
     margin: 0 auto 25px;
-    color: var(--text-primary);
-    opacity: 0.8;
+    color: var(--gold);
 }
 
 .tech-icon svg {
     width: 100%;
     height: 100%;
+    color: var(--gold);
+    transition: color 0.5s ease;
+}
+
+.tech-feature:hover .tech-icon svg {
+    color: var(--gold-light);
 }
 
 .tech-feature h3 {
@@ -931,7 +946,7 @@ h1, h2, h3, h4, h5, h6 {
 .ai-item svg {
     width: 18px;
     height: 18px;
-    color: var(--text-primary);
+    color: var(--gold);
     flex-shrink: 0;
 }
 
