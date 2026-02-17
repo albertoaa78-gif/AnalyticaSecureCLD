@@ -15,6 +15,13 @@
     --primary: #ffffff;
     --border: rgba(255, 255, 255, 0.05);
     --border-hover: rgba(255, 255, 255, 0.15);
+
+    /* Gold palette */
+    --gold:        #C9A84C;
+    --gold-light:  #F2D06B;
+    --gold-dark:   #A07830;
+    --gold-border: rgba(201, 168, 76, 0.35);
+    --gold-glow:   rgba(201, 168, 76, 0.15);
     
     --font-display: 'Cinzel', serif;
     --font-body: 'Manrope', sans-serif;
@@ -103,22 +110,21 @@ h1, h2, h3, h4, h5, h6 {
     transition: opacity 0.3s ease;
 }
 
-.logo:hover {
-    opacity: 0.8;
-}
+.logo:hover { opacity: 0.85; }
 
 .logo-icon {
     width: 32px;
     height: 32px;
     padding: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-primary);
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
     transition: all 0.5s ease;
 }
 
 .logo:hover .logo-icon {
     transform: rotate(360deg);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: var(--gold);
+    color: var(--gold-light);
 }
 
 .nav-menu {
@@ -141,20 +147,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    color: var(--text-primary);
+    color: var(--gold-light);
 }
 
 .btn-contacto {
     padding: 12px 30px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid var(--gold-border);
     color: var(--text-primary) !important;
     transition: all 0.3s ease;
 }
 
-.btn-contacto:hover {
-    background: var(--text-primary);
+.btn-contacto:hover,
+.btn-contacto.active {
+    background: var(--gold);
     color: var(--bg-primary) !important;
-    border-color: var(--text-primary);
+    border-color: var(--gold);
 }
 
 .menu-toggle {
@@ -295,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
     display: inline-block;
     padding: 18px 50px;
-    background: var(--text-primary);
+    background: var(--gold);
     color: var(--bg-primary);
     text-decoration: none;
     font-size: 10px;
@@ -303,12 +310,13 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.3em;
     text-transform: uppercase;
     transition: all 0.3s ease;
-    border: 1px solid var(--text-primary);
+    border: 1px solid var(--gold);
 }
 
 .btn-primary:hover {
     background: transparent;
-    color: var(--text-primary);
+    color: var(--gold-light);
+    border-color: var(--gold-light);
     transform: translateY(-2px);
 }
 
@@ -321,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     padding: 18px 50px;
     background: transparent;
-    border: 1px solid var(--border-hover);
+    border: 1px solid var(--gold-border);
     color: var(--text-primary);
     text-decoration: none;
     font-size: 10px;
@@ -332,8 +340,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: var(--text-primary);
+    background: var(--gold-glow);
+    border-color: var(--gold);
+    color: var(--gold-light);
 }
 
 .scroll-indicator {
@@ -351,7 +360,7 @@ h1, h2, h3, h4, h5, h6 {
 .scroll-line {
     width: 1px;
     height: 50px;
-    background: linear-gradient(to bottom, transparent, var(--text-primary), transparent);
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
@@ -359,7 +368,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 9px;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--gold-dark);
+}
+
+/* Gold text utility */
+.gold {
+    color: var(--gold);
 }
 
 @keyframes scrollPulse {
@@ -474,23 +488,24 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--gold-border);
     transition: all 0.7s ease;
 }
 
 .value-card:hover .value-icon-container {
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: var(--gold);
+    background: var(--gold-glow);
 }
 
 .value-icon-container svg {
     width: 20px;
     height: 20px;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--gold-dark);
     transition: all 0.7s ease;
 }
 
 .value-card:hover .value-icon-container svg {
-    color: var(--text-primary);
+    color: var(--gold-light);
 }
 
 .value-title {
@@ -684,7 +699,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 12px;
     letter-spacing: 0.4em;
     text-transform: uppercase;
-    color: var(--text-primary);
+    color: var(--gold);
     display: block;
     margin-bottom: 15px;
 }
@@ -740,7 +755,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-size: 64px;
     font-weight: 300;
-    color: var(--text-primary);
+    color: var(--gold);
     margin-bottom: 15px;
     letter-spacing: 0.05em;
 }
@@ -884,6 +899,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-size: 48px;
     font-weight: 300;
+    color: var(--gold);
     margin-bottom: 10px;
 }
 
@@ -1127,9 +1143,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-submit {
     padding: 18px 50px;
-    background: var(--text-primary);
+    background: var(--gold);
     color: var(--bg-primary);
-    border: 1px solid var(--text-primary);
+    border: 1px solid var(--gold);
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.3em;
@@ -1141,7 +1157,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-submit:hover {
     background: transparent;
-    color: var(--text-primary);
+    color: var(--gold-light);
+    border-color: var(--gold-light);
 }
 
 /* ===== TRUST SECTION ===== */
@@ -1215,14 +1232,15 @@ h1, h2, h3, h4, h5, h6 {
     width: 32px;
     height: 32px;
     padding: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-primary);
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
     transition: all 0.5s ease;
 }
 
 .footer-brand:hover .footer-logo-icon {
     transform: rotate(360deg);
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: var(--gold);
+    color: var(--gold-light);
 }
 
 .footer-logo {
