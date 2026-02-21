@@ -1306,15 +1306,15 @@ h1, h2, h3, h4, h5, h6 {
 .footer-contact li {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 12px;
-    color: var(--text-secondary);
+    gap: 14px;
+    font-size: 14px;
+    color: var(--gold) !important;
 }
 
 .footer-contact svg {
     width: 20px;
     height: 20px;
-    color: var(--text-primary);
+    color: var(--gold) !important;
     opacity: 0.5;
     flex-shrink: 0;
 }
