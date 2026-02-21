@@ -113,17 +113,18 @@ h1, h2, h3, h4, h5, h6 {
 .logo:hover { opacity: 0.85; }
 
 .logo-icon {
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
-    mix-blend-mode: screen;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
-    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    transition: all 0.5s ease;
 }
 
 .logo:hover .logo-icon {
-    transform: rotate(90deg);
+    transform: rotate(360deg);
+    border-color: var(--gold);
+    color: var(--gold-light);
 }
 
 .nav-menu {
@@ -1243,17 +1244,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo-icon {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-    mix-blend-mode: screen;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
-    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    transition: all 0.5s ease;
 }
 
 .footer-brand:hover .footer-logo-icon {
-    transform: rotate(90deg);
+    transform: rotate(360deg);
+    border-color: var(--gold);
+    color: var(--gold-light);
 }
 
 .footer-logo {
